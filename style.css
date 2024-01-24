@@ -1,0 +1,326 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+}
+
+:root {
+    --main-color: #74b3dd;
+    --first: #5d9ec9;
+    --second: #6fadd6;
+    --gray: #86878b;
+    --light-gray: #bcbdc4;
+    --white: rgb(255, 255, 255);
+}
+
+
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+p,
+li {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.highlight {
+    color: var(--second);
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+}
+
+.hover:hover {
+    cursor: pointer;
+    transition: all 350ms ease;
+}
+
+.people__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.people__name {
+    font-family: 'Zen Tokyo Zoo', cursive;
+    letter-spacing: .6rem;
+    font-size: 6rem;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.people__adress {
+    font-size: 1.5rem;
+}
+
+.left__column {
+    flex-grow: 1;
+}
+
+.right__column {
+    flex-grow: .4;
+}
+
+.people__photo {
+
+    width: 30%;
+    max-width: 200px;
+
+}
+
+.item__header {
+    font-family: 'Zen Tokyo Zoo', cursive;
+    color: var(--first);
+    font-size: 2.5rem;
+    letter-spacing: .2rem;
+}
+
+.item {
+    margin-bottom: 1.5rem;
+}
+
+.item__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item__header {
+    margin-bottom: 1.1rem;
+}
+
+
+.list {
+
+    list-style-type: none;
+    font-size: 1.3rem;
+    width: 100%;
+
+}
+
+.list__li {
+    min-width: 20%;
+    text-align: center;
+}
+
+.list__li:hover {
+    transform: scale(1.2);
+    transition: all 350ms ease;
+
+}
+
+.list__li:not(:hover) {
+    transition: all 350ms ease;
+}
+
+.list__link {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--gray);
+}
+
+.list__link:hover {
+    color: var(--second);
+}
+
+.list__li:focus {
+    color: var(--second);
+}
+
+.list__li:hover {
+    color: var(--second);
+}
+
+
+.item__text {
+
+    margin: 0 auto 1rem;
+    width: 90%;
+}
+
+.code__block {
+    background-color: #bcbdc431;
+    padding: 3rem;
+}
+
+.code__example {
+    font-size: 1.3rem;
+
+    border-radius: 1rem;
+}
+
+.octicon {
+    fill: var(--gray);
+    width: 5rem;
+}
+
+.octicon:hover {
+    fill: var(--second);
+
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    margin-bottom: 3rem;
+    background-color: white;
+}
+
+.navbar__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.navigation {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar__link {
+    font-size: 1.1rem;
+    color: var(--gray);
+    font-weight: inherit;
+}
+
+
+.navbar__logo {
+    color: var(--black);
+    font-size: 0.9rem;
+}
+
+.navigation__list {
+
+    list-style-type: none;
+    color: var(--gray);
+
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin: 1.25rem 0 1.2rem;
+
+
+}
+
+.navigation__item {
+    font-size: 0.6rem;
+}
+
+.navigation__item:not(:last-child) {
+    margin-right: 2rem;
+
+}
+
+.navigation__item:hover {
+    color: var(--blue);
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+}
+
+
+.text-transform_uppercase {
+    text-transform: uppercase;
+}
+
+
+
+@media (max-width: 600px) {
+    * {
+        font-size: 8px;
+    }
+
+    .people__photo {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 375px) {
+    .item__list {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar__container {
+        flex-direction: column;
+
+    }
+
+    .experience__list {
+        flex-direction: column;
+    }
+
+    .people__info {
+        flex-wrap: wrap;
+    }
+
+    .people__photo {
+        max-width: 200px;
+    }
+
+    .item__header {
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 1500px) {
+    .container {
+        max-width: 1300px;
+    }
+
+    .people__photo {
+        max-width: 400px;
+    }
+
+    * {
+        font-size: 20px;
+    }
+
+}
